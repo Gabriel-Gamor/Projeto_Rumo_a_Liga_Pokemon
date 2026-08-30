@@ -1,0 +1,1171 @@
+{
+  "nome": "Vale da Liga",
+  "vertices": [
+    {
+      "id": "LAB",
+      "nome": "Laboratório do Professor Carvalho",
+      "tipo": "laboratorio"
+    },
+    {
+      "id": "PRA",
+      "nome": "Praça dos Caminhos",
+      "tipo": "comum"
+    },
+    {
+      "id": "PMC1",
+      "nome": "Centro Médico Oeste",
+      "tipo": "pmc"
+    },
+    {
+      "id": "BOS",
+      "nome": "Bosque das Sementes",
+      "tipo": "comum"
+    },
+    {
+      "id": "LAG",
+      "nome": "Lago da Travessia",
+      "tipo": "comum"
+    },
+    {
+      "id": "PMC2",
+      "nome": "Centro Médico Leste",
+      "tipo": "pmc"
+    },
+    {
+      "id": "EST",
+      "nome": "Estádio da Liga",
+      "tipo": "estadio"
+    },
+    {
+      "id": "G01",
+      "nome": "Ginásio da Pedra",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G02",
+      "nome": "Ginásio da Cascata",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G03",
+      "nome": "Ginásio da Trovão",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G04",
+      "nome": "Ginásio da Arco-Íris",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G05",
+      "nome": "Ginásio da Alma",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G06",
+      "nome": "Ginásio da Pântano",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G07",
+      "nome": "Ginásio da Vulcão",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "G08",
+      "nome": "Ginásio da Terra",
+      "tipo": "ginasio"
+    },
+    {
+      "id": "CAV",
+      "nome": "Caverna de Cristal",
+      "tipo": "comum"
+    },
+    {
+      "id": "FLO",
+      "nome": "Floresta Nebulosa",
+      "tipo": "comum"
+    },
+    {
+      "id": "MON",
+      "nome": "Montanha do Eco",
+      "tipo": "comum"
+    },
+    {
+      "id": "RUI",
+      "nome": "Ruínas Antigas",
+      "tipo": "comum"
+    },
+    {
+      "id": "PMC3",
+      "nome": "Centro Médico Sul",
+      "tipo": "pmc"
+    }
+  ],
+  "arestas": [
+    [
+      "LAB",
+      "PRA",
+      8
+    ],
+    [
+      "PRA",
+      "PMC1",
+      6
+    ],
+    [
+      "PRA",
+      "G01",
+      10
+    ],
+    [
+      "G01",
+      "CAV",
+      6
+    ],
+    [
+      "CAV",
+      "G02",
+      6
+    ],
+    [
+      "G02",
+      "PMC1",
+      9
+    ],
+    [
+      "G03",
+      "FLO",
+      7
+    ],
+    [
+      "FLO",
+      "PMC1",
+      7
+    ],
+    [
+      "G03",
+      "BOS",
+      7
+    ],
+    [
+      "BOS",
+      "G04",
+      9
+    ],
+    [
+      "G04",
+      "PMC3",
+      6
+    ],
+    [
+      "PMC3",
+      "G05",
+      6
+    ],
+    [
+      "G05",
+      "PMC2",
+      8
+    ],
+    [
+      "PMC2",
+      "G06",
+      9
+    ],
+    [
+      "G06",
+      "MON",
+      5
+    ],
+    [
+      "MON",
+      "LAG",
+      6
+    ],
+    [
+      "LAG",
+      "G07",
+      10
+    ],
+    [
+      "G07",
+      "G08",
+      13
+    ],
+    [
+      "G08",
+      "RUI",
+      4
+    ],
+    [
+      "RUI",
+      "EST",
+      5
+    ],
+    [
+      "PMC2",
+      "EST",
+      20
+    ],
+    [
+      "BOS",
+      "PMC2",
+      15
+    ],
+    [
+      "PMC1",
+      "LAG",
+      25
+    ],
+    [
+      "G02",
+      "G05",
+      22
+    ],
+    [
+      "G04",
+      "G08",
+      18
+    ]
+  ],
+  "ordem_mapa": [
+    "LAB",
+    "PRA",
+    "G01",
+    "CAV",
+    "G02",
+    "G04",
+    "BOS",
+    "G03",
+    "FLO",
+    "PMC1",
+    "PMC3",
+    "PMC2",
+    "G06",
+    "MON",
+    "LAG",
+    "G05",
+    "EST",
+    "RUI",
+    "G08",
+    "G07"
+  ],
+  "prazo": 2964,
+  "quantidades": {
+    "selvagens": 42,
+    "treinadores": 7,
+    "ovos": 7,
+    "ervas": 20,
+    "rockets": 1
+  },
+  "iniciais": [
+    "bulbasaur",
+    "charmander",
+    "squirtle"
+  ],
+  "especies": [
+    {
+      "id": "bulbasaur",
+      "fases": [
+        {
+          "nome": "Bulbasaur",
+          "tipos": [
+            "planta",
+            "venenoso"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Chicote de Cipó",
+              "tipo": "planta"
+            }
+          ]
+        },
+        {
+          "nome": "Ivysaur",
+          "tipos": [
+            "planta",
+            "venenoso"
+          ],
+          "ataques": [
+            {
+              "nome": "Folha Navalha",
+              "tipo": "planta"
+            }
+          ]
+        },
+        {
+          "nome": "Venusaur",
+          "tipos": [
+            "planta",
+            "venenoso"
+          ],
+          "ataques": [
+            {
+              "nome": "Raio Solar",
+              "tipo": "planta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "charmander",
+      "fases": [
+        {
+          "nome": "Charmander",
+          "tipos": [
+            "fogo"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Brasa",
+              "tipo": "fogo"
+            }
+          ]
+        },
+        {
+          "nome": "Charmeleon",
+          "tipos": [
+            "fogo"
+          ],
+          "ataques": [
+            {
+              "nome": "Lança-Chamas",
+              "tipo": "fogo"
+            }
+          ]
+        },
+        {
+          "nome": "Charizard",
+          "tipos": [
+            "fogo",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Ataque de Asa",
+              "tipo": "voador"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "squirtle",
+      "fases": [
+        {
+          "nome": "Squirtle",
+          "tipos": [
+            "agua"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Jato de Água",
+              "tipo": "agua"
+            }
+          ]
+        },
+        {
+          "nome": "Wartortle",
+          "tipos": [
+            "agua"
+          ],
+          "ataques": [
+            {
+              "nome": "Bolhas",
+              "tipo": "agua"
+            }
+          ]
+        },
+        {
+          "nome": "Blastoise",
+          "tipos": [
+            "agua"
+          ],
+          "ataques": [
+            {
+              "nome": "Hidro Bomba",
+              "tipo": "agua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pikachu",
+      "fases": [
+        {
+          "nome": "Pikachu",
+          "tipos": [
+            "eletrico"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Choque do Trovão",
+              "tipo": "eletrico"
+            }
+          ]
+        },
+        {
+          "nome": "Raichu",
+          "tipos": [
+            "eletrico"
+          ],
+          "ataques": [
+            {
+              "nome": "Trovão",
+              "tipo": "eletrico"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gastly",
+      "fases": [
+        {
+          "nome": "Gastly",
+          "tipos": [
+            "fantasma",
+            "venenoso"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Lambida",
+              "tipo": "fantasma"
+            }
+          ]
+        },
+        {
+          "nome": "Haunter",
+          "tipos": [
+            "fantasma",
+            "venenoso"
+          ],
+          "ataques": [
+            {
+              "nome": "Bola Sombria",
+              "tipo": "fantasma"
+            }
+          ]
+        },
+        {
+          "nome": "Gengar",
+          "tipos": [
+            "fantasma",
+            "venenoso"
+          ],
+          "ataques": [
+            {
+              "nome": "Bomba de Lodo",
+              "tipo": "venenoso"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geodude",
+      "fases": [
+        {
+          "nome": "Geodude",
+          "tipos": [
+            "pedra",
+            "terra"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Lançamento de Pedras",
+              "tipo": "pedra"
+            }
+          ]
+        },
+        {
+          "nome": "Graveler",
+          "tipos": [
+            "pedra",
+            "terra"
+          ],
+          "ataques": [
+            {
+              "nome": "Magnitude",
+              "tipo": "terra"
+            }
+          ]
+        },
+        {
+          "nome": "Golem",
+          "tipos": [
+            "pedra",
+            "terra"
+          ],
+          "ataques": [
+            {
+              "nome": "Terremoto",
+              "tipo": "terra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "machop",
+      "fases": [
+        {
+          "nome": "Machop",
+          "tipos": [
+            "lutador"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Golpe Baixo",
+              "tipo": "lutador"
+            }
+          ]
+        },
+        {
+          "nome": "Machoke",
+          "tipos": [
+            "lutador"
+          ],
+          "ataques": [
+            {
+              "nome": "Golpe de Karatê",
+              "tipo": "lutador"
+            }
+          ]
+        },
+        {
+          "nome": "Machamp",
+          "tipos": [
+            "lutador"
+          ],
+          "ataques": [
+            {
+              "nome": "Soco Dinâmico",
+              "tipo": "lutador"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pidgey",
+      "fases": [
+        {
+          "nome": "Pidgey",
+          "tipos": [
+            "normal",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Rajada",
+              "tipo": "voador"
+            }
+          ]
+        },
+        {
+          "nome": "Pidgeotto",
+          "tipos": [
+            "normal",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Ataque de Asa",
+              "tipo": "voador"
+            }
+          ]
+        },
+        {
+          "nome": "Pidgeot",
+          "tipos": [
+            "normal",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Furacão",
+              "tipo": "voador"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rattata",
+      "fases": [
+        {
+          "nome": "Rattata",
+          "tipos": [
+            "normal"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Ataque Rápido",
+              "tipo": "normal"
+            }
+          ]
+        },
+        {
+          "nome": "Raticate",
+          "tipos": [
+            "normal"
+          ],
+          "ataques": [
+            {
+              "nome": "Mordida",
+              "tipo": "sombrio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zubat",
+      "fases": [
+        {
+          "nome": "Zubat",
+          "tipos": [
+            "venenoso",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Absorver",
+              "tipo": "planta"
+            }
+          ]
+        },
+        {
+          "nome": "Golbat",
+          "tipos": [
+            "venenoso",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Mordida",
+              "tipo": "sombrio"
+            }
+          ]
+        },
+        {
+          "nome": "Crobat",
+          "tipos": [
+            "venenoso",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Veneno Cruzado",
+              "tipo": "venenoso"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magikarp",
+      "fases": [
+        {
+          "nome": "Magikarp",
+          "tipos": [
+            "agua"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            }
+          ]
+        },
+        {
+          "nome": "Gyarados",
+          "tipos": [
+            "agua",
+            "voador"
+          ],
+          "ataques": [
+            {
+              "nome": "Cachoeira",
+              "tipo": "agua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "onix",
+      "fases": [
+        {
+          "nome": "Onix",
+          "tipos": [
+            "pedra",
+            "terra"
+          ],
+          "ataques": [
+            {
+              "nome": "Investida",
+              "tipo": "normal"
+            },
+            {
+              "nome": "Lançamento de Pedras",
+              "tipo": "pedra"
+            }
+          ]
+        },
+        {
+          "nome": "Steelix",
+          "tipos": [
+            "aco",
+            "terra"
+          ],
+          "ataques": [
+            {
+              "nome": "Cauda de Ferro",
+              "tipo": "aco"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ginasios": [
+    {
+      "id": "G01",
+      "vertice": "G01",
+      "insignia": "Pedra",
+      "lider": "Brock",
+      "movel": false,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G02",
+      "vertice": "G02",
+      "insignia": "Cascata",
+      "lider": "Misty",
+      "movel": false,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G03",
+      "vertice": "G03",
+      "insignia": "Trovão",
+      "lider": "Lt. Surge",
+      "movel": true,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G04",
+      "vertice": "G04",
+      "insignia": "Arco-Íris",
+      "lider": "Erika",
+      "movel": false,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G05",
+      "vertice": "G05",
+      "insignia": "Alma",
+      "lider": "Koga",
+      "movel": false,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G06",
+      "vertice": "G06",
+      "insignia": "Pântano",
+      "lider": "Sabrina",
+      "movel": true,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G07",
+      "vertice": "G07",
+      "insignia": "Vulcão",
+      "lider": "Blaine",
+      "movel": false,
+      "periodo": 300,
+      "permanencia": 100
+    },
+    {
+      "id": "G08",
+      "vertice": "G08",
+      "insignia": "Terra",
+      "lider": "Giovanni",
+      "movel": false,
+      "periodo": 300,
+      "permanencia": 100
+    }
+  ],
+  "vantagens": {
+    "normal": {
+      "pedra": 0.5,
+      "fantasma": 0,
+      "aco": 0.5
+    },
+    "fogo": {
+      "fogo": 0.5,
+      "agua": 0.5,
+      "planta": 2,
+      "gelo": 2,
+      "inseto": 2,
+      "pedra": 0.5,
+      "dragao": 0.5,
+      "aco": 2
+    },
+    "agua": {
+      "fogo": 2,
+      "agua": 0.5,
+      "planta": 0.5,
+      "terra": 2,
+      "pedra": 2,
+      "dragao": 0.5
+    },
+    "eletrico": {
+      "agua": 2,
+      "eletrico": 0.5,
+      "planta": 0.5,
+      "terra": 0,
+      "voador": 2,
+      "dragao": 0.5
+    },
+    "planta": {
+      "fogo": 0.5,
+      "agua": 2,
+      "planta": 0.5,
+      "venenoso": 0.5,
+      "terra": 2,
+      "voador": 0.5,
+      "inseto": 0.5,
+      "pedra": 2,
+      "dragao": 0.5,
+      "aco": 0.5
+    },
+    "gelo": {
+      "fogo": 0.5,
+      "agua": 0.5,
+      "planta": 2,
+      "gelo": 0.5,
+      "terra": 2,
+      "voador": 2,
+      "dragao": 2,
+      "aco": 0.5
+    },
+    "lutador": {
+      "normal": 2,
+      "gelo": 2,
+      "venenoso": 0.5,
+      "voador": 0.5,
+      "psiquico": 0.5,
+      "inseto": 0.5,
+      "pedra": 2,
+      "fantasma": 0,
+      "sombrio": 2,
+      "aco": 2,
+      "fada": 0.5
+    },
+    "venenoso": {
+      "planta": 2,
+      "venenoso": 0.5,
+      "terra": 0.5,
+      "pedra": 0.5,
+      "fantasma": 0.5,
+      "aco": 0,
+      "fada": 2
+    },
+    "terra": {
+      "fogo": 2,
+      "eletrico": 2,
+      "planta": 0.5,
+      "venenoso": 2,
+      "voador": 0,
+      "inseto": 0.5,
+      "pedra": 2,
+      "aco": 2
+    },
+    "voador": {
+      "eletrico": 0.5,
+      "planta": 2,
+      "lutador": 2,
+      "inseto": 2,
+      "pedra": 0.5,
+      "aco": 0.5
+    },
+    "psiquico": {
+      "lutador": 2,
+      "venenoso": 2,
+      "psiquico": 0.5,
+      "sombrio": 0,
+      "aco": 0.5
+    },
+    "inseto": {
+      "fogo": 0.5,
+      "planta": 2,
+      "lutador": 0.5,
+      "venenoso": 0.5,
+      "voador": 0.5,
+      "psiquico": 2,
+      "fantasma": 0.5,
+      "sombrio": 2,
+      "aco": 0.5,
+      "fada": 0.5
+    },
+    "pedra": {
+      "fogo": 2,
+      "gelo": 2,
+      "lutador": 0.5,
+      "terra": 0.5,
+      "voador": 2,
+      "inseto": 2,
+      "aco": 0.5
+    },
+    "fantasma": {
+      "normal": 0,
+      "psiquico": 2,
+      "fantasma": 2,
+      "sombrio": 0.5
+    },
+    "dragao": {
+      "dragao": 2,
+      "aco": 0.5,
+      "fada": 0
+    },
+    "sombrio": {
+      "lutador": 0.5,
+      "psiquico": 2,
+      "fantasma": 2,
+      "sombrio": 0.5,
+      "fada": 0.5
+    },
+    "aco": {
+      "fogo": 0.5,
+      "agua": 0.5,
+      "eletrico": 0.5,
+      "gelo": 2,
+      "pedra": 2,
+      "aco": 0.5,
+      "fada": 2
+    },
+    "fada": {
+      "fogo": 0.5,
+      "lutador": 2,
+      "venenoso": 0.5,
+      "dragao": 2,
+      "sombrio": 2,
+      "aco": 0.5
+    }
+  },
+  "regras": {
+    "vantagens_tipos": true,
+    "xp_selvagem_max": 180,
+    "xp_lider_max": 120,
+    "xp_treinador_max": 10,
+    "hp_regiao_min": 60,
+    "hp_regiao_max": 100,
+    "ap_inicial": [
+      40,
+      48
+    ],
+    "dp_inicial": [
+      20,
+      28
+    ],
+    "ap_regiao": [
+      24,
+      34
+    ],
+    "dp_regiao": [
+      10,
+      20
+    ]
+  },
+  "fontes": {
+    "tipos": "https://github.com/smogon/pokemon-showdown/blob/master/data/typechart.ts"
+  },
+  "desenho": {
+    "posicoes": {
+      "LAB": [
+        100,
+        85
+      ],
+      "PRA": [
+        340,
+        85
+      ],
+      "G01": [
+        580,
+        85
+      ],
+      "CAV": [
+        820,
+        85
+      ],
+      "G02": [
+        1060,
+        85
+      ],
+      "G04": [
+        100,
+        245
+      ],
+      "BOS": [
+        340,
+        245
+      ],
+      "G03": [
+        580,
+        245
+      ],
+      "FLO": [
+        820,
+        245
+      ],
+      "PMC1": [
+        1060,
+        245
+      ],
+      "PMC3": [
+        100,
+        405
+      ],
+      "PMC2": [
+        340,
+        405
+      ],
+      "G06": [
+        580,
+        405
+      ],
+      "MON": [
+        820,
+        405
+      ],
+      "LAG": [
+        1060,
+        405
+      ],
+      "G05": [
+        100,
+        565
+      ],
+      "EST": [
+        340,
+        565
+      ],
+      "RUI": [
+        580,
+        565
+      ],
+      "G08": [
+        820,
+        565
+      ],
+      "G07": [
+        1060,
+        565
+      ]
+    },
+    "desvios": {
+      "PRA|PMC1": [
+        [
+          340,
+          25
+        ],
+        [
+          1160,
+          25
+        ],
+        [
+          1160,
+          245
+        ]
+      ],
+      "G02|G05": [
+        [
+          1220,
+          30
+        ],
+        [
+          1220,
+          730
+        ],
+        [
+          20,
+          730
+        ],
+        [
+          20,
+          565
+        ]
+      ],
+      "G04|G08": [
+        [
+          55,
+          245
+        ],
+        [
+          55,
+          650
+        ],
+        [
+          730,
+          650
+        ],
+        [
+          730,
+          565
+        ]
+      ]
+    }
+  }
+}
