@@ -10,7 +10,8 @@ from nucleo.erros import ErroProjeto
 from nucleo.regiao import carregar_regiao
 from nucleo.salvamento import salvar, carregar
 from nucleo.jogo import Jogo
-from interface.componentes import CORES, configurar_estilo, escolher_grupo, habilitar, fonte
+from interface.componentes import (CORES, configurar_estilo, escolher_grupo, habilitar, fonte,
+                                   centralizar_janela)
 from interface.mapa import TelaMapa
 from interface.equipe import TelaEquipe
 from interface.inventario import TelaInventario
@@ -318,10 +319,20 @@ class Aplicacao:
         ttk.Label(corpo,text='Este cálculo considera viagens e uma vitória por ginásio. Não prevê curas, derrotas ou a ausência de líderes móveis.',wraplength=650,style='Aviso.TLabel').pack(anchor='w',pady=12)
         def selecionar():
             destino=self.jogo.mundo.ginasios[plano['ginasios'][0]].vertice if plano['ginasios'] else self.jogo.mundo.regiao.estadio
-            self.mapa.selecionar(destino)
+            self.mapa.mostrar_planejamento(plano['vertices'],destino)
             self.abas.select(self.mapa)
             popup.destroy()
-        ttk.Button(corpo,text='Mostrar primeira rota no mapa',command=selecionar,style='Principal.TButton').pack(anchor='e')
+        ttk.Button(corpo,text='Mostrar rota completa no mapa',command=selecionar,style='Principal.TButton').pack(anchor='e')
+
+        # O popup começa oculto para não piscar enquanto é montado. Depois de
+        # calcular o tamanho, ele é centralizado e exibido antes de receber o
+        # grab. Sem o deiconify(), o grab ficava preso em uma janela invisível
+        # e a aplicação aparentava travar ao clicar em "Planejar ginásios restantes".
+        popup.resizable(False,False)
+        centralizar_janela(popup,self.raiz)
+        popup.deiconify()
+        popup.lift()
+        popup.focus_force()
         popup.grab_set()
 
     def atualizar_registro(self):

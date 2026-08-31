@@ -13,6 +13,10 @@ class TelaMapa(ttk.Frame):
         self.app=app
         self.selecionado=None
         self.rota=[]
+        # Rota completa gerada pelo planejamento dos ginásios. Ela é apenas
+        # uma sobreposição visual; self.rota continua sendo a rota do destino
+        # selecionado e é a usada pelos botões de viagem.
+        self.rota_planejada=[]
         self.centros={}
         self.arestas_desenhadas=[]
         self.rotulos_pesos=[]
@@ -110,6 +114,9 @@ class TelaMapa(ttk.Frame):
         self.selecionar(self.selecionado)
 
     def selecionar(self,codigo):
+        # Ao selecionar manualmente outro local, o planejamento anterior deixa
+        # de ser a rota em destaque para não mostrar um plano já desatualizado.
+        self.rota_planejada=[]
         self.selecionado=codigo
         j=self.app.jogo
         regiao=j.mundo.regiao
@@ -129,6 +136,27 @@ class TelaMapa(ttk.Frame):
                 break
         self.informacao.set(texto)
         self.atualizar_botoes()
+        self.desenhar()
+
+    def mostrar_planejamento(self, vertices, proximo_destino):
+        """Destaca no mapa a rota completa calculada para os ginásios.
+
+        O destino selecionado continua sendo somente a próxima etapa. Assim,
+        "Uma estrada" e "Seguir rota" mantêm o comportamento normal, enquanto
+        o mapa mostra em azul todo o percurso sugerido pelo planejador.
+        """
+        caminho=list(vertices)
+        if not caminho:
+            return
+        # selecionar() atualiza o painel lateral e a rota operacional até a
+        # próxima etapa. Em seguida guardamos separadamente a rota completa
+        # apenas para o desenho.
+        self.selecionar(proximo_destino)
+        self.rota_planejada=caminho
+        self.informacao.set(
+            self.informacao.get() +
+            "\nRota completa do planejamento destacada em azul no mapa."
+        )
         self.desenhar()
 
     def atualizar_botoes(self):
@@ -257,7 +285,8 @@ class TelaMapa(ttk.Frame):
         caixas=[(x-bw/2,y-bh/2,x+bw/2,y+bh/2) for x,y in self.centros.values()]
         c=self.canvas
         c.delete('all')
-        rotas={frozenset((u,v)) for u,v in zip(self.rota,self.rota[1:])}
+        rota_visual=self.rota_planejada or self.rota
+        rotas={frozenset((u,v)) for u,v in zip(rota_visual,rota_visual[1:])}
         self.arestas_desenhadas=[]
         self.rotulos_pesos=[]
         ocupados=[]

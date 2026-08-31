@@ -55,6 +55,27 @@ def configurar_estilo(raiz):
     estilo.configure("TLabelframe.Label", font=fonte(10,"bold"))
 
 
+
+def centralizar_janela(janela, mestre=None, largura=None, altura=None):
+    """Centraliza uma janela sobre a janela mestre (ou na tela)."""
+    janela.update_idletasks()
+
+    largura = largura or janela.winfo_reqwidth()
+    altura = altura or janela.winfo_reqheight()
+
+    if mestre is not None and mestre.winfo_exists():
+        mestre.update_idletasks()
+        x = mestre.winfo_rootx() + (mestre.winfo_width() - largura) // 2
+        y = mestre.winfo_rooty() + (mestre.winfo_height() - altura) // 2
+    else:
+        x = (janela.winfo_screenwidth() - largura) // 2
+        y = (janela.winfo_screenheight() - altura) // 2
+
+    # Evita posicionar a janela fora da área visível em telas menores.
+    x = max(0, min(x, janela.winfo_screenwidth() - largura))
+    y = max(0, min(y, janela.winfo_screenheight() - altura))
+    janela.geometry(f"{largura}x{altura}+{x}+{y}")
+
 def habilitar(botao, condicao):
     botao.state(["!disabled"] if condicao else ["disabled"])
 
@@ -140,6 +161,9 @@ def escolher_grupo(mestre, pokemons, quantidade, titulo):
     botoes.pack(fill="x",pady=(8,0))
     ttk.Button(botoes,text="Cancelar",command=janela.destroy).pack(side="left")
     ttk.Button(botoes,text="Confirmar seleção",style="Principal.TButton",command=confirmar).pack(side="right")
+    centralizar_janela(janela, mestre)
+    janela.lift()
+    janela.focus_force()
     janela.grab_set()
     janela.wait_window()
     return resposta or None

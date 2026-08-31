@@ -5,7 +5,7 @@ from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
 
 from nucleo.batalha import EstrategiaAutomatica, SolicitarDesistencia
-from interface.componentes import CORES, tipos_texto, habilitar, fonte
+from interface.componentes import CORES, tipos_texto, habilitar, fonte, centralizar_janela
 
 
 class JanelaCombate(tk.Toplevel, EstrategiaAutomatica):
@@ -74,6 +74,9 @@ class JanelaCombate(tk.Toplevel, EstrategiaAutomatica):
         self.btn_voltar=ttk.Button(rodape,text='Voltar ao jogo',style='Principal.TButton',command=self.fechar)
         habilitar(self.btn_voltar,False)
         self.btn_voltar.pack(side='right')
+        centralizar_janela(self, app.raiz, 990, 740)
+        self.lift()
+        self.focus_force()
         self.grab_set()
         self.escrever('Os turnos pertencem a uma única batalha: ao final, o relógio avança 1 unidade.')
 
