@@ -20,7 +20,7 @@ from interface.combate import JanelaCombate
 
 RAIZ=Path(__file__).resolve().parents[1]
 
-PASTA_SAVES=RAIZ/'Saves'
+PASTA_SAVES=RAIZ/'saves'
 PASTA_SAVES.mkdir(parents=True,exist_ok=True)
 
 
