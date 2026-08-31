@@ -131,7 +131,7 @@ class TestJornada(unittest.TestCase):
         from nucleo.regiao import carregar_regiao
         from testes.apoio import RAIZ
         regiao = carregar_regiao(RAIZ / 'dados' / 'regiao.json')
-        for semente in (1,3,7,99):
+        for semente in (1,3,7,50,90):
             with self.subTest(semente=semente):
                 j = Jogo(regiao, semente)
                 resultado = jornada_de_teste(j)
@@ -323,7 +323,7 @@ class TestJornada(unittest.TestCase):
         self.assertGreaterEqual(d[a.posicao],.75*max(d.values()))
 
     def test_jornada_conclui_sem_atribuir_badges_diretamente(self):
-        for seed in (1,3,7,99):
+        for seed in (1,3,7,50,90):
             with self.subTest(semente=seed):
                 j=jogo(seed)
                 r=jornada_de_teste(j)
