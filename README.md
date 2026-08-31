@@ -69,6 +69,12 @@ A semente serve para repetir a mesma sequência de sorteios. A semente `3` é a
 padrão atual do projeto, mas pode ser alterada ou sorteada pela própria
 interface.
 
+Dependendo da semente escolhida, a jornada pode acabar ficando mais fácil ou
+mais difícil, pois cada semente gera uma sequência diferente de acontecimentos
+aleatórios. Isso não significa que uma semente com número maior seja mais
+difícil: o valor serve apenas para definir e permitir reproduzir uma determinada
+sequência de sorteios.
+
 ### Mapa e viagens
 
 Clique em um local do mapa para selecionar um destino. O caminho calculado
