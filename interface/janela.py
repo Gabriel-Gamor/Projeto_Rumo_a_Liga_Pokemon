@@ -35,6 +35,7 @@ class Aplicacao:
         largura=min(1280,max(1000,raiz.winfo_screenwidth()-70))
         altura=min(830,max(680,raiz.winfo_screenheight()-100))
         self.raiz.geometry(f'{largura}x{altura}')
+        centralizar_janela(self.raiz, largura=largura, altura=altura)  # NOVO: centraliza a janela principal
         self.raiz.minsize(1000,680)
         self.raiz.protocol('WM_DELETE_WINDOW',self.fechar)
         configurar_estilo(raiz)
